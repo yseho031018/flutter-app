@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Center(
-          child: createBody3(),
+          child: createBody5(),
         ));
   }
 }
@@ -97,8 +97,8 @@ Widget createBody2() {
 Widget createBody3(){
   return Container(
     color: Colors.blue,
-    height: 100,
-    child: Row(
+    width: 100,
+    child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: List.generate(
@@ -111,5 +111,61 @@ Widget createBody3(){
         ),
       ),
     ),
+  );
+}
+
+Widget createBody4(){
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      ...List.generate(
+          4,
+              (index) => Container(
+            width: 40,
+            height: 40,
+            color: Colors.red,
+            margin: const EdgeInsets.all(5),
+          ),
+      ),
+      Expanded(
+        child: Container(
+          height: 40,
+          color: Colors.red,
+          margin: const EdgeInsets.all(5),
+        ),
+      ),
+    ],
+  );
+}
+
+Widget createBody5(){
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      Expanded(
+        flex: 1,
+        child: Container(
+          height: 40,
+          color: Colors.red,
+          margin: const EdgeInsets.all(5),
+        ),
+      ),
+      Expanded(
+        flex: 2,
+        child: Container(
+          height: 40,
+          color: Colors.red,
+          margin: const EdgeInsets.all(5),
+        ),
+      ),
+      Expanded(
+        flex: 3,
+        child: Container(
+          height: 40,
+          color: Colors.red,
+          margin: const EdgeInsets.all(5),
+        ),
+      ),
+    ],
   );
 }
