@@ -115,7 +115,7 @@ Widget createBody3(){
 }
 
 Widget createBody4(){
-  return Row(
+  return Column(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
       ...List.generate(
@@ -129,6 +129,15 @@ Widget createBody4(){
       ),
       Expanded(
         child: Container(
+          height: 40,
+          color: Colors.red,
+          margin: const EdgeInsets.all(5),
+        ),
+      ),
+      ...List.generate(
+        4,
+            (index) => Container(
+          width: 40,
           height: 40,
           color: Colors.red,
           margin: const EdgeInsets.all(5),
